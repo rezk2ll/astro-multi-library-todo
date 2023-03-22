@@ -7,11 +7,10 @@ import lit from "@astrojs/lit";
 import tailwind from "@astrojs/tailwind";
 import partytown from "@astrojs/partytown";
 import prefetch from "@astrojs/prefetch";
-import image from "@astrojs/image";
 
 import preact from "@astrojs/preact";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), svelte(), vue(), solidJs(), lit(), tailwind(), partytown(), prefetch(), image(), preact()]
+  integrations: [react(), svelte(), vue(), solidJs(), lit(), tailwind(), partytown(), prefetch(), preact()]
 });

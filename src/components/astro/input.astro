@@ -1,0 +1,53 @@
+<div class='relative w-full'>
+  <input
+    type='text'
+    id='input'
+    placeholder='write something to do'
+    class="block w-full p-4 pl-10 text-sm text-gray-900 border rounded-lg bg-gray-50 focus:ring-1 focus:outline-none"
+    required
+  />
+  <button
+    type='submit'
+    id='submit'
+    class='text-gray-900 absolute right-2.5 bottom-2.5 bg-green-400 focus:ring-1 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2'
+  >
+    Add
+  </button>
+</div>
+
+<script>
+  import { store } from '../../store';
+
+  const handleAdd = () => {
+    const input = document.getElementById('input');
+    const valid = ['focus:ring-blue-300', 'border-green-300'];
+    const invalid = ['focus:ring-red-500', 'border-red-300'];
+    const value = (input as HTMLInputElement).value;
+
+    if (!value) {
+      input?.classList.remove(...valid);
+      input?.classList.add(...invalid);
+      return;
+    }
+
+    store.addTodo({
+      completed: false,
+      id: Date.now(),
+      text: value,
+    });
+
+    input?.classList.remove(...invalid);
+    input?.classList.add(...valid);
+    (input as HTMLInputElement).value = '';
+  };
+
+  document.getElementById('submit')?.addEventListener('click', () => {
+    handleAdd();
+  });
+
+  document.getElementById('input')?.addEventListener('keyup', (e) => {
+    if (e.key === 'Enter') {
+      handleAdd();
+    }
+  });
+</script>

@@ -1,0 +1,8 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { TodoList } from '../../components/lit/todo';
+---
+
+<Layout title='using lit'>
+  <TodoList client:load />
+</Layout>

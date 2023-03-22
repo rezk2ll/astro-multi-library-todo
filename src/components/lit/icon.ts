@@ -22,7 +22,7 @@ export class LitIcon extends LitElement {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 200 200"
       class="${this.size === 'small'
-        ? 'w-6 h-6 hover:animate-pulse'
+        ? 'w-6 h-6 md:hover:animate-pulse'
         : 'w-28 h-28'}"
     >
       <view id="flame" viewBox="0 0 160 200" />

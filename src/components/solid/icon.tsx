@@ -6,7 +6,7 @@ type PropsType = {
 
 export default ({ size = "big" }: PropsType) => (
   <svg
-    class={`${size === "small" ? 'w-6 h-6 hover:animate-pulse' : 'w-28 h-28'}`}
+    class={`${size === "small" ? 'w-6 h-6 md:hover:animate-pulse' : 'w-28 h-28'}`}
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 166 155.3'
   >

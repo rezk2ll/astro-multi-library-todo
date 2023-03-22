@@ -5,10 +5,11 @@ import SolidIcon from './solid/icon';
 import SvelteIcon from './svelte/icon.svelte';
 import VueIcon from './vue/icon.vue';
 import AstroIcon from './astro/icon.astro';
+import PreactIcon from './preact/icon';
 ---
 
 <nav
-  class='bg-gray-100 bg-clip-border shadow-sm shadow-slate-800 h-20 w-full flex relative justify-between items-center mx-auto'
+  class='bg-gray-100 bg-clip-border shadow-sm shadow-slate-800 h-20 w-full flex relative justify-between items-center'
 >
   <div class='inline-flex'>
     <a href='/'
@@ -180,11 +181,11 @@ import AstroIcon from './astro/icon.astro';
     </a>
   </div>
 
-  <div class='flex-auto'>
+  <div class='flex-initial'>
     <div class='flex justify-center items-center relative'>
-      <div class='flex mr-4 items-center'>
+      <div class='flex md:mr-4 items-center'>
         <a
-          class='inline-block py-2 px-3 hover:bg-gray-200 rounded-full'
+          class='inline-block py-2 md:px-3 px-2 hover:bg-gray-200 rounded-full'
           href='/'
           title='use Astro'
         >
@@ -196,9 +197,9 @@ import AstroIcon from './astro/icon.astro';
           </div>
         </a>
       </div>
-      <div class='flex mr-4 items-center'>
+      <div class='flex md:mr-4 items-center'>
         <a
-          class='inline-block py-2 px-3 hover:bg-gray-200 rounded-full'
+          class='inline-block py-2 md:px-3 px-2 hover:bg-gray-200 rounded-full'
           href='/svelte'
           title='use Svelte'
         >
@@ -210,9 +211,9 @@ import AstroIcon from './astro/icon.astro';
           </div>
         </a>
       </div>
-      <div class='flex mr-4 items-center'>
+      <div class='flex md:mr-4 items-center'>
         <a
-          class='inline-block py-2 px-3 hover:bg-gray-200 rounded-full'
+          class='inline-block py-2 md:px-3 px-2 hover:bg-gray-200 rounded-full'
           href='/react'
           title='use React'
         >
@@ -224,9 +225,9 @@ import AstroIcon from './astro/icon.astro';
           </div>
         </a>
       </div>
-      <div class='flex mr-4 items-center'>
+      <div class='flex md:mr-4 items-center'>
         <a
-          class='inline-block py-2 px-3 hover:bg-gray-200 rounded-full'
+          class='inline-block py-2 md:px-3 px-2 hover:bg-gray-200 rounded-full'
           href='/solid'
           title='use Solid'
         >
@@ -238,9 +239,9 @@ import AstroIcon from './astro/icon.astro';
           </div>
         </a>
       </div>
-      <div class='flex mr-4 items-center'>
+      <div class='flex md:mr-4 items-center'>
         <a
-          class='inline-block py-2 px-3 hover:bg-gray-200 rounded-full'
+          class='inline-block py-2 md:px-3 px-2 hover:bg-gray-200 rounded-full'
           href='/vue'
           title='use Vue'
         >
@@ -252,9 +253,9 @@ import AstroIcon from './astro/icon.astro';
           </div>
         </a>
       </div>
-      <div class='flex mr-4 items-center'>
+      <div class='flex md:mr-4 items-center'>
         <a
-          class='inline-block py-2 px-3 hover:bg-gray-200 rounded-full'
+          class='inline-block py-2 md:px-3 px-2 hover:bg-gray-200 rounded-full'
           href='/lit'
           title='use Lit'
         >
@@ -262,19 +263,33 @@ import AstroIcon from './astro/icon.astro';
             aria-label='Lit'
             class='flex items-center relative cursor-pointer whitespace-nowrap'
           >
-            <LitIcon size={'small'} />
+            <LitIcon size='small' />
+          </div>
+        </a>
+      </div>
+            <div class='flex md:mr-4 items-center'>
+        <a
+          class='inline-block py-2 md:px-3 px-2 hover:bg-gray-200 rounded-full'
+          href='/preact'
+          title='use Preact'
+        >
+          <div
+            aria-label='Preact'
+            class='flex items-center relative cursor-pointer whitespace-nowrap'
+          >
+            <PreactIcon size={'small'} />
           </div>
         </a>
       </div>
     </div>
   </div>
   <div class='flex-initial'>
-    <div class='flex justify-end items-center relative'>
-      <div class='flex mr-4 items-center'>
+    <div class='flex md:justify-end md:items-center'>
+      <div class='flex md:mr-4 md:items-center'>
         <div class='block relative'>
           <a
             type='button'
-            class='inline-block py-2 px-3 hover:bg-gray-200 rounded-full relative'
+            class='py-2 md:px-3 px-1 hover:bg-gray-200 rounded-full relative'
             target='_blank'
             href='https://github.com/rezk2ll/astro-multi-library-todo'
           >

@@ -5,7 +5,7 @@ withDefaults(defineProps<{ size?: "small" | "big" }>(), {
 </script>
 
 <template>
-  <svg :class="{ 'w-6 h-6 hover:animate-pulse': size === 'small', 'w-28 h-28': size === 'big' }" version="1.1"
+  <svg :class="{ 'w-6 h-6 md:hover:animate-pulse': size === 'small', 'w-28 h-28': size === 'big' }" version="1.1"
     viewBox="0 0 261.76 226.69" xmlns="http://www.w3.org/2000/svg">
     <g transform="matrix(1.3333 0 0 -1.3333 -76.311 313.34)">
       <g transform="translate(178.06 235.01)">

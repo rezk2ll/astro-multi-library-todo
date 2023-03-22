@@ -12,7 +12,7 @@ const { title } = Astro.props;
 <html lang='en'>
   <head>
     <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
@@ -21,9 +21,9 @@ const { title } = Astro.props;
     class='background-animate w-full h-screen bg-gradient-to-r from-cyan-500 via-teal-500 to-blue-500'
   >
     <Nav />
-    <div class='flex flex-col items-center justify-center h-[80vh]'>
+    <div class='flex flex-col items-center justify-center h-[80vh] w-full'>
       <div
-        class='!z-5 relative flex rounded-xl w-2/4 bg-gray-100 bg-clip-border shadow-sm shadow-slate-800 flex-col !p-4 3xl:p-![18px] h-3/5'
+        class='!z-5 relative flex rounded-xl w-11/12 md:w-2/4 bg-gray-100 bg-clip-border shadow-sm shadow-slate-800 flex-col !p-4 3xl:p-![18px] h-4/5'
       >
         <slot />
       </div>

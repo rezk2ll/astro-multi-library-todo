@@ -4,7 +4,7 @@ import Input from './input';
 
 export default (): React.ReactElement => (
   <>
-    <div className='fixed animate-float shadow-none top-1/3 left-[80%]'>
+    <div className='fixed animate-float shadow-none top-20 left-[60%] md:top-1/3 md:left-[80%]'>
       <Icon />
     </div>
     <div className='flex flex-col h-full'>

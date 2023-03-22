@@ -44,7 +44,7 @@ export class TodoList extends LitElement {
   ];
   protected render(): TemplateResult {
     return html`
-      <div class="fixed animate-float shadow-none top-1/3 left-[80%]">
+      <div class="fixed animate-float shadow-none top-20 left-[60%] md:top-1/3 md:left-[80%]">
         <lit-icon></lit-icon>
       </div>
       <div class="flex flex-col h-full">

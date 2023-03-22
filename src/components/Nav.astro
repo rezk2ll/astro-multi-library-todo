@@ -1,4 +1,6 @@
 ---
+/** @skipLibCheck true */
+
 import { LitIcon } from './lit/icon';
 import ReactIcon from './react/icon';
 import SolidIcon from './solid/icon';
@@ -6,6 +8,10 @@ import SvelteIcon from './svelte/icon.svelte';
 import VueIcon from './vue/icon.vue';
 import AstroIcon from './astro/icon.astro';
 import PreactIcon from './preact/icon';
+
+const url = Astro.url;
+
+const activeFramework = url.pathname.split('/').pop() || 'astro'
 ---
 
 <nav
@@ -185,7 +191,7 @@ import PreactIcon from './preact/icon';
     <div class='flex justify-center items-center relative'>
       <div class='flex md:mr-4 items-center'>
         <a
-          class='inline-block py-2 md:px-3 px-2 hover:bg-gray-200 rounded-full'
+          class={`inline-block py-2 md:px-3 px-2 hover:bg-gray-200 rounded-full ${activeFramework === 'astro' ? 'bg-gray-300 hover:bg-gray-300' : ''}`}
           href='/'
           title='use Astro'
         >
@@ -199,7 +205,7 @@ import PreactIcon from './preact/icon';
       </div>
       <div class='flex md:mr-4 items-center'>
         <a
-          class='inline-block py-2 md:px-3 px-2 hover:bg-gray-200 rounded-full'
+          class={`inline-block py-2 md:px-3 px-2 hover:bg-gray-200 rounded-full ${activeFramework === 'svelte' ? 'bg-gray-300 hover:bg-gray-300' : ''}`}
           href='/svelte'
           title='use Svelte'
         >
@@ -213,7 +219,7 @@ import PreactIcon from './preact/icon';
       </div>
       <div class='flex md:mr-4 items-center'>
         <a
-          class='inline-block py-2 md:px-3 px-2 hover:bg-gray-200 rounded-full'
+          class={`inline-block py-2 md:px-3 px-2 hover:bg-gray-200 rounded-full ${activeFramework === 'react' ? 'bg-gray-300 hover:bg-gray-300' : ''}`}
           href='/react'
           title='use React'
         >
@@ -227,7 +233,7 @@ import PreactIcon from './preact/icon';
       </div>
       <div class='flex md:mr-4 items-center'>
         <a
-          class='inline-block py-2 md:px-3 px-2 hover:bg-gray-200 rounded-full'
+          class={`inline-block py-2 md:px-3 px-2 hover:bg-gray-200 rounded-full ${activeFramework === 'solid' ? 'bg-gray-300 hover:bg-gray-300' : ''}`}
           href='/solid'
           title='use Solid'
         >
@@ -241,7 +247,7 @@ import PreactIcon from './preact/icon';
       </div>
       <div class='flex md:mr-4 items-center'>
         <a
-          class='inline-block py-2 md:px-3 px-2 hover:bg-gray-200 rounded-full'
+          class={`inline-block py-2 md:px-3 px-2 hover:bg-gray-200 rounded-full ${activeFramework === 'vue' ? 'bg-gray-300 hover:bg-gray-300' : ''}`}
           href='/vue'
           title='use Vue'
         >
@@ -255,7 +261,7 @@ import PreactIcon from './preact/icon';
       </div>
       <div class='flex md:mr-4 items-center'>
         <a
-          class='inline-block py-2 md:px-3 px-2 hover:bg-gray-200 rounded-full'
+          class={`inline-block py-2 md:px-3 px-2 hover:bg-gray-200 rounded-full ${activeFramework === 'lit' ? 'bg-gray-300 hover:bg-gray-300' : ''}`}
           href='/lit'
           title='use Lit'
         >
@@ -263,13 +269,13 @@ import PreactIcon from './preact/icon';
             aria-label='Lit'
             class='flex items-center relative cursor-pointer whitespace-nowrap'
           >
-            <LitIcon size='small' />
+            <LitIcon size={'small'} />
           </div>
         </a>
       </div>
             <div class='flex md:mr-4 items-center'>
         <a
-          class='inline-block py-2 md:px-3 px-2 hover:bg-gray-200 rounded-full'
+          class={`inline-block py-2 md:px-3 px-2 hover:bg-gray-200 rounded-full ${activeFramework === 'preact' ? 'bg-gray-300 hover:bg-gray-300' : ''}`}
           href='/preact'
           title='use Preact'
         >

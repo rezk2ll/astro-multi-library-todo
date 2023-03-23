@@ -17,6 +17,7 @@ const activeFramework = url.pathname.split('/').pop() || 'astro'
 <nav
   class='bg-gray-100 bg-clip-border shadow-sm shadow-slate-800 h-20 w-full flex relative justify-between items-center'
 >
+  { JSON.parse(url.pathname) }
   <div class='inline-flex'>
     <a href='/'
       ><div class='hidden md:block pl-4'>

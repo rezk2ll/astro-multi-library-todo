@@ -7,10 +7,13 @@ import lit from "@astrojs/lit";
 import tailwind from "@astrojs/tailwind";
 import partytown from "@astrojs/partytown";
 import prefetch from "@astrojs/prefetch";
-
 import preact from "@astrojs/preact";
+
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), svelte(), vue(), solidJs(), lit(), tailwind(), partytown(), prefetch(), preact()]
+  integrations: [react(), svelte(), vue(), solidJs(), lit(), tailwind(), partytown(), prefetch(), preact()],
+  output: "server",
+  adapter: vercel()
 });

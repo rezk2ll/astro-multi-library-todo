@@ -9,7 +9,7 @@ import partytown from "@astrojs/partytown";
 import prefetch from "@astrojs/prefetch";
 import preact from "@astrojs/preact";
 
-import vercel from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel/edge";
 
 // https://astro.build/config
 export default defineConfig({
